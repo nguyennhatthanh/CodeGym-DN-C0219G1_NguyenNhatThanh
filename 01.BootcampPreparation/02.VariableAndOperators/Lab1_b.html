@@ -1,18 +1,21 @@
 <!DOCTYPE html>
+
 <head>
-<title> Check A Number</title>
+    <title> Check A Number</title>
 </head>
+
 <body>
     <script>
         var a;
         var b;
         a = parseInt(prompt("nhap a")); /////prompt() lay du lieu nhap vao tu ban phim
         b = parseInt(prompt("nhap b"));
-        if(a%b)////a%b la a chia cho b lay phan du -- neu a%b =0 chia het khong du thi se ep ve kieu boolean voi gia tri false
-               /////                               -- neu a%b >0 chia co du thi se ep ve kieu boolean voi gia tri true 
+        if (a % b)////a%b la a chia cho b lay phan du -- neu a%b =0 chia het khong du thi se ep ve kieu boolean voi gia tri false
+            /////                               -- neu a%b >0 chia co du thi se ep ve kieu boolean voi gia tri true 
             alert("a khong la boi cua b");
         else
             alert("a la boi cua  b");
     </script>
 </body>
+
 </html>
