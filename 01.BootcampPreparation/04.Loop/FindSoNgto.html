@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+
+<head>
+    <title>Tim n so nguyen to dau tien</title>
+</head>
+
+<body>
+    <script>
+        var n;
+        n = parseInt(prompt("Can tim " + n + " so nguyen to dau tien"));
+        var count = 0;
+        var number = 2;//// bien de bat dau vong lap while;
+        var sout = 0;
+        
+
+        while (count < n) {
+            if (isPrime(number)) {
+                sout = sout + number ;
+                count++;
+            }
+            number++;
+        }
+
+
+        function isPrime(n) {
+            var isPrime = true;
+            for (let i = 2; i <= Math.sqrt(n); i++) {
+                if (n % i == 0) {
+                    isPrime = false;
+                    break;
+                }
+            }
+            return isPrime;
+        }
+
+        
+        document.write(sout);
+
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+
+<head>
+    <title>Which year is Leap Year?</title>
+</head>
+
+<body>
+    <script>
+        var year = parseInt(prompt(" nhap nam : "));
+
+        var leapyear = false;
+        var yearmod4 = year % 4 == 0;
+        var yearmod100 = year % 100 == 0;
+        var yearmod400 = yearmod100 % 400 == 0;
+
+        leapyear = (yearmod4) ? ((yearmod100) ? ((yearmod400) ? true : false) : true): false;
+
+        if (leapyear) {
+            document.write(year + " day la nam nhuan");
+        }
+        else
+            document.write(year + " day khong phai nam nhuan");
+    </script>
+
+
+</body>
+
+</html>

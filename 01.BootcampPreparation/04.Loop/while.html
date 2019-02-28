@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+
+<head>
+    <title>check number you input with while</title>
+</head>
+
+<body>
+
+    <script>
+       
+        var total = null;
+        var number =parseInt(prompt(" nhap mot so bat ki"));
+        while (number != -1) {
+            total = total + number;
+            document.write(number + "+");
+            number =parseInt(prompt(" nhap mot so bat ki"));
+        }
+        document.write("="+ total);
+        
+    </script>
+
+</body>
+
+</html>
