@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+   <head>
+       <title>Test Online</title>
+   </head>
+   <Body>
+       <script>
+           function Student(name, age, club) {
+               this.Name = name;
+               this.Age = age;
+               this.Club = club;
+               this.Full_Information = function() {
+                   return this.Name + ', ' + this.Age + ', ' + this.Club;
+               }
+           }
+           var ronaldo = new Student("Cristia Ronaldo", 32, "Juventus");
+           var messi = new Student("Lionel Messi", 32, "Barcalona");
+           var full_a = ronaldo.Full_Information();
+           var full_b = messi.Full_Information();
+           document.write(full_a+"<br/>");
+           document.write(full_b);
+       </script>
+   </Body>
+</html>

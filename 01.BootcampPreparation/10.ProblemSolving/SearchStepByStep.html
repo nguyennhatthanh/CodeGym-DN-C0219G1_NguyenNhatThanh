@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+
+<head>
+    <title>Search Step By Step</title>
+</head>
+
+<body>
+    <script>
+        function dispArr(arr) {
+            for (var i = 0; i < arr.length; ++i) {
+                document.write(arr[i] + " ");
+                if (i % 10 == 9) {
+                    document.write("<br/>");
+                }
+            }
+        }
+
+        function seqSearch(arr, data) {
+            for (var i = 0; i < arr.length; ++i) {
+                if (arr[i] == data) {
+                    return true;
+                }
+            }
+            return false;
+        }
+        var nums = [];
+        for (var i = 0; i < 100; ++i) {
+            nums[i] = Math.floor(Math.random() * 101);
+        }
+        dispArr(nums);
+
+        var a = prompt("Enter a number to search for: ");
+        var num = parseInt(a);
+        if (seqSearch(nums, num)) {
+            document.write(num + " is in the array.");
+        }
+        else {
+            document.write(num + " is not in the array.");
+        }
+
+    </script>
+</body>
+
+</html>

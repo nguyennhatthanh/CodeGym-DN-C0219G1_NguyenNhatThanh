@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+
+<head>
+    <title>Ve Canvas</title>
+</head>
+
+<body>
+    <canvas id="myCanvas" width="1000" height="100" style="border:1px solid #d3d3d3;">
+
+        <script id="ve duong thang">
+            var c = document.getElementById("myCanvas");
+            var ctx = c.getContext("2d");/// su dung ve kieu 2d
+            ctx.moveTo(0, 0);/// diem bat dau
+            ctx.lineTo(200, 100);/// diem ket thuc
+            ctx.stroke();
+        </script>
+
+        <script id="ve hinh tron">
+            var c = document.getElementById("myCanvas");
+            var ctx = c.getContext("2d");
+            ctx.beginPath();
+            ctx.arc(95, 50, 40, 0, 2 * Math.PI);//canh phai , tren , ban kinh 
+            ctx.stroke();
+
+        </script>
+        <script id="ve chu">
+            var c = document.getElementById("myCanvas");
+            var ctx = c.getContext("2d");
+            ctx.font = "30px Arial";/// chon font chu va co chu
+            ctx.fillText("Hello World", 20, 70);/// text, canh trai, canh tren
+        </script>
+
+
+        <script>///ve gradient
+            var c = document.getElementById("myCanvas");
+            var ctx = c.getContext("2d");
+             // Fill with gradient
+            ctx.fillStyle = "red";
+            ctx.fillRect(10, 10, 200, 80);///canh trai, canh tren, do rong fill, do dai fill
+        </script>
+
+        <script>/// ve gradient duong tron
+            var c = document.getElementById("myCanvas");
+            var ctx = c.getContext("2d");
+        </script>
+</body>
+
+</html>

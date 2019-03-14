@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+
+<head>
+    <title>Switch On - Off </title>
+</head>
+
+<body>
+    <button onclick="button.switch()"> click </button>
+    <canvas id="Lamp" width=" 300" height="300">
+
+    </canvas>
+    <script>
+        function fill(color) {
+            var c = document.getElementById("Lamp");
+            var ctx = c.getContext("2d");
+            ctx.fillStyle = color;
+            ctx.fillRect(0, 0, 300, 300);
+        }
+        var ElectricLamp = function () {
+
+            this.setStatus = function (status) {
+                this.status = status;
+            }
+            this.turnOff = function () {
+                this.status = false;
+                fill("red");
+            }
+            this.turnOn = function () {
+                this.status = true;
+                fill("blue");
+            }
+        }
+
+
+        var SwitchButton = function () {
+            this.status = function () {
+                this.status = status;
+            }
+            this.connectToLamp = function (electricLamp) {
+                this.lamp = electricLamp;
+            }
+            this.switchOff = function () {
+                this.lamp.turnOff();
+            }
+            this.switchOn = function () {
+                this.lamp.turnOn();
+            }
+            this.switch = function () {
+                if (lamp.status) {
+                    this.switchOff();
+                } else {
+                    this.switchOn();
+                }
+            }
+        }
+
+
+        var lamp = new ElectricLamp();
+        lamp.setStatus(true);
+        var button = new SwitchButton();
+        button.connectToLamp(lamp);
+
+    </script>
+</body>
+
+</html>

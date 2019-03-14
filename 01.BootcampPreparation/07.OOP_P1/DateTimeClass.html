@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+
+<head>
+    <title>DateTime</title>
+</head>
+
+<body>
+    <script>
+        var DateTime = function (day, month, year) {
+            this.day = day;
+            this.month = month;
+            this.year = year;
+            this.getday = function () {
+                return this.day;
+            }
+            this.getmonth = function () {
+                return this.month;
+            }
+            this.getyear = function () {
+                return this.year;
+            }
+
+            this.setday = function () {
+                this.day = day;
+            }
+            this.setmonth = function () {
+                this.month = month;
+            }
+            this.setyear = function () {
+                this.year = year;
+            }
+        }
+        
+        function thisday(date) {
+            document.write(" hom nay la :" +  date.day + "/" + date.month + "/" + date.year)
+        }
+        
+        
+        let Date = new DateTime(15, 10, 2019);
+        thisday(Date);
+
+
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+
+<head>
+    <title> What is OOP</title>
+</head>
+
+<body>
+    <script>
+        let person = {
+            name: ['Bob', 'Smith'],
+            age: 32,
+            gender: 'male',
+            interests: ['music', 'skiing'],
+            bio: function () {
+                alert(this.name[0] + ' ' + this.name[1] + ' is ' + this.age + ' years old. He likes ' + this.interests[0] + ' and ' + this.interests[1] + '.');
+            },
+            greeting: function () {
+                alert("Hi! I'm" + this.name[0] + '.');
+            },
+            old: function(){
+                alert(person['age']);
+            }
+        };
+        //console.log(person.bio());
+        person.bio();
+        person.greeting();
+        person.old();
+    </script>
+</body>
+
+</html>

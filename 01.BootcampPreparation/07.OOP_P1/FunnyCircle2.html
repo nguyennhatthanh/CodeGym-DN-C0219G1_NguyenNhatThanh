@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+
+<head>
+    <title>Funny Circle</title>
+</head>
+
+<body>
+    <canvas id="mycanvas" width="800" height="500" style="border:1px solid #d3d3d3;">
+        <script>
+            function Circle(x, y, radius) {
+                this.x = x;
+                this.y = y;
+                this.radius = radius;
+            }
+            function createCircle() {
+                var ctx = document.getElementById("mycanvas").getContext("2d");
+                var radius = (Math.random()) * 80;
+                var circle = new Circle(500, 500, radius);
+                ctx.beginPath();
+                ctx.arc(circle.x, circle.y, circle.radius, 0, 2 * Math.PI);
+                ctx.fill();
+            }
+            createCircle();
+
+            
+        </script>
+    </canvas>
+</body>
+
+</html>
